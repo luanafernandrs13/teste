@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/438112469_418322614294486_5104326985848618807_n.jpg?stp=dst-jpg_p403x403&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4MIVqx9nis4Q7kNvgEcX2l7&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QEfagNYFnD-iiu7lLC72WZFE3nNoZKRq9IjySiCK7xgow&oe=66633E74');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .slide-container {
+            width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            display: none;
+            /* Oculta inicialmente */
+        }
+
+        .slide {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-content">
+            <h2>Faça o login para começar a nossa história</h2>
+            <form id="loginForm" onsubmit="return loginUser()">
+                <input type="text" id="username" placeholder="Usuário" required><br><br>
+                <input type="password" id="password" placeholder="Senha" required><br><br>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+    <div class="slide-container">
+        <div class="slide">
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438065502_1502424430484659_8975958954375037681_n.jpg?stp=dst-jpg_p403x403&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YCrbXHMyYNIQ7kNvgGg2V0o&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QFQuqZQnwBFw9TouLXemfWy9suKrOXJhQyInB3tXtumWQ&oe=6663218B" alt="Imagem 1">
+            <h2>Bem vindo de volta ao SENAI</h2>
+            <p>O lugar onde nó conhecemos, onde por um tempo você não ia com a minha cara. Fomos bem rapidos, ficamos um mês depois de nos conhecermos... E desde então não desgrudamos mais.</p>
+        </div>
+        <div class="slide">
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438158409_801070025298628_2533896729018376266_n.jpg?stp=dst-jpg_p403x403&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=d24QBNj2Rz8Q7kNvgH4kHQk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHc8TJxKTnPlh3qYNoqDrqDB-92SvS8TG-SAlKtOZdwRQ&oe=66634162" alt="Imagem 2">
+            <h2>Primeira vez no cinema</h2>
+            <p>Essa foi a primeira vez que saímos juntos. Foi um dia muito bom. Foi a primeira vez que realmente tivemos um tempo só pra nós dois. Conversamos, e eu percebi que realmente estava gostando de você. Um sentimento muito bom, mesmo ainda tendo um pouco de receio.</p>
+        </div>
+        <!-- Adicione mais slides conforme necessário -->
+        <div class="slide">
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438115948_243947325447133_6948266286585356159_n.jpg?stp=dst-jpg_p403x403&_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=9dGCrpWP9bEQ7kNvgHGo4us&_nc_oc=Adj9TxgwRS0mNS8fCFEhvJ_Vg_UaXVCLuhCXT14bdkixj1i6AxQNVnUg0HnK-SNG3wj1x7e78sktD-CWKB_Fyr1n&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QH7nb8f4Zn0TqVQRgFO0QX0YWWGhjyOQMFIniSjjqIzcw&oe=6663232F" alt="Imagem 3">
+            <h2>O primeiro dia 9</h2>
+            <p>Não sei se você lembra o que aconteceu esse dia, mas eu não consigo esquecer. Independente do que não aconteceu, foi perfeito. Todo momento com você é!</p>
+        </div>
+        <div class="slide">
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438095123_999550888568018_8917742983653560371_n.jpg?stp=dst-jpg_p403x403&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=rC7_Z8l2a3EQ7kNvgGMSvNP&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHvwfbyndEXTQzgkmFVwsp7Zd0CBXOYgjbS0euCjS3aSQ&oe=66634740" alt="Imagem 4">
+            <h2>Lapa</h2>
+            <p>Minha primeira vez na Lapa. E olha só, foi com você. Quantas coisas eu não fiz a primeira vez com você, não é mesmo ? Você literalmente é único e está marcado em mim para sempre.</p>
+        </div>
+        <div class="slide">
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438060619_2362587393947741_8185052810683294200_n.jpg?stp=dst-jpg_p403x403&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=usK36LxOHZ4Q7kNvgEuxnIY&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QG3kp2AJH9kUz_RHAQVL12AMrCOUEdjeO4l5loZyR18Lw&oe=666334FA" alt="Imagem 5">
+            <h2>01/01/2024</h2>
+            <p>Sem dúvida um dos dias mais felizes da minha vida. Minha primeira vez passando o ano novo em Copacabada. Foi o dia que você oficialmente me pediu em namoro. Vou lembrar desse dia para sempre. Você como sempre faz cada momento ser único.</p>
+        </div>
+        <div class="slide">
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438060433_981584552956330_1757385018163397293_n.jpg?stp=dst-jpg_p403x403&_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=HcJZ95OvbuEQ7kNvgFxpm_v&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHa6uKdnjAUWqA4mFlkz1gGi45VlhqDDFIUAubhyilNrA&oe=666340D3" alt="Imagem 6">
+            <h2>Jonatas...</h2>
+            <p>Eu amo você com a certeza que como nunca amei ninguém. Você me mudou pra alguém melhor, sabe disso tanto quanto eu. Te vejo em cada parte do meu futuro e quero ter você comigo em cada momento. Seja uma conquista, seja uma alegria, tristeza... Te quero comigo para sempre. Você é o amor da minha vida e quero que seja para ela também. Eu te amo, beijos.</p>
+        </div>
+    </div>
+    <!-- Botões para navegação -->
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="plusSlides(-1)">Anterior</button>
+        <button onclick="plusSlides(1)">Próximo</button>
+    </div>
+    <script>
+        var slideIndex = 1;
+
+        function showDashboard() {
+            var loginContainer = document.querySelector('.login-container');
+            var slideContainer = document.querySelector('.slide-container');
+            loginContainer.style.display = 'none';
+            slideContainer.style.display = 'block';
+            showSlides(slideIndex);
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function loginUser() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            // Verifica se o usuário e a senha correspondem a "jonatas" e "1234"
+            if (username === "jonatas" && password === "1234") {
+                showDashboard();
+            } else {
+                alert("Usuário ou senha incorretos.");
+            }
+            return false; // Para evitar o envio do formulário
+        }
+    </script>
+</body>
+
+</html>
